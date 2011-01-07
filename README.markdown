@@ -2,7 +2,7 @@
 
 Tired of the old, clumsy, system-default selectbox? Well, here's a great news for you: Symphony has got a brand new plugin for better selectboxes!
 
-- Version: 1.0
+- Version: 1.0.1
 - Author: Simone Economo, my.ekoes@gmail.com
 - Build Date: 07th Jan 2011
 - Requirements: Symphony CMS 2.1.0+
