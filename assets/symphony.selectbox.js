@@ -24,12 +24,14 @@
 				if (!selectbox.hasClass('multiple')) {
 					selectbox.find('li.selected').removeClass('selected');
 					selectbox.find('span.value').html(option.text());
-					if (isStartMode !== true)
-						selectbox.find('.current').trigger('click.selectbox');
+//					if (isStartMode !== true)
+//						selectbox.find('.current').trigger('click.selectbox');
 				}
 
 				option.attr('selected', !$(this).hasClass('selected'));
 				$(this).toggleClass('selected');
+
+				object.trigger('change');
 			};
 
 			var update = function(event, isStartMode) {
@@ -200,7 +202,7 @@
 					/* Event handlers */
 
 					div.values.current.bind('click.selectbox', show);
-					div.values.all.find('li.value').bind('click.selectbox', select);
+					div.values.all.find('li.value').bind('click.selectbox, change.selectbox', select);
 					object.bind('change.selectbox', update);
 
 					object.trigger('change.selectbox', [true]);

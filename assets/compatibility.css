@@ -6,18 +6,29 @@ div.group,
 	overflow: visible;
 }
 
+.settings {
+	padding-bottom: 3em;
+}
+
+.settings .contextual div.group, .settings > div.group {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+.settings > .contextual > .duplicator,
+.settings > label:last-child {
+	margin-bottom: 0;
+}
+
 div.group:after {
 	clear: left;
 	display: block;
-	content: "";
+	content: " ";
 	height: 1%;
 }
 
-.duplicator > .controls.top:after {
-	clear: left;
-	display: block;
-	content: "";
-	height: 1%;
+.duplicator > .controls.top {
+	overflow: hidden;
 }
 
 .duplicator > .controls .selectbox {
@@ -30,11 +41,19 @@ div.group:after {
 	position: static;
 }
 
+.duplicator > .instance > .header {
+	clear: none;
+}
 
-div.group .selectbox {
+.duplicator.collapsible > .instance > .header {
+	clear: both;
+}
+
+
+.group label > .selectbox {
 	display: block;
 }
 
-div.group .selectbox .current {
+.group label >.selectbox .current {
 	width: auto !important;
 }
