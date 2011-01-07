@@ -1,0 +1,202 @@
+.selectbox span {
+	background-color: transparent;
+	border: none;
+	display: inline;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+
+.selectbox ul, .selectbox li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.selectbox {
+	display: inline-block;
+	margin: 0 10px 0 0;
+	position: relative;
+	font: 11px/normal 'Lucida Grande', Meiryo, Tahoma, Verdana, sans-serif;
+	color: #554;
+	text-decoration:none;
+	line-height: 25px;
+	text-align: left;
+}
+
+.selectbox .current, .selectbox.multiple .options {
+	cursor: pointer;
+	position: relative;
+	height: 25px;
+	padding: 0 30px 0 10px;
+	border: 1px solid #AFAFAF;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	background: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.00, rgb(222, 222, 222)),
+		color-stop(0.60, rgb(245, 245, 245))
+	);
+	background: -moz-linear-gradient(
+		center bottom,
+		rgb(222, 222, 222) 0%,
+		rgb(245, 245, 245) 60%
+	);
+/*	-webkit-box-shadow: 1px 0 8px #ddd, 1px 1px 8px #ddd, 0 1px 8px #ddd;*/
+/*	-moz-box-shadow: 1px 0 8px #ddd, 1px 1px 8px #ddd, 0 1px 8px #ddd;*/
+}
+
+.selectbox.open .current, .selectbox.multiple .options {
+	-webkit-border-radius: 3px 3px 0 0;
+	-moz-border-radius: 3px 3px 0 0;
+	border-radius: 3px 3px 0 0;
+}
+
+.selectbox .current .arrow {
+	position: absolute;
+	top: 2px; right: 5px; bottom: 0;
+	width: 20px;
+	background: transparent url(images/arrow.png) no-repeat center center;
+}
+
+.selectbox .current span {
+	background: transparent;
+	color: #000;
+}
+
+.selectbox .display:focus {
+	outline: none;
+}
+
+.selectbox .values {
+	position: absolute; left: 0; right: 0;
+	top: 26px;
+	line-height: 22px;
+	z-index: 99999;
+	max-height: 200px;
+	overflow-y: auto;
+	margin: 0;
+	border: 1px solid #828790;
+	-webkit-border-radius: 0 0 3px 3px;
+	-moz-border-radius: 0 0 3px 3px;
+	border-radius: 0 0 3px 3px;
+}
+
+.selectbox .values.rendering { /* DO TO TOUCH THIS */
+	position: static;
+}
+
+.selectbox .values li.value,
+.selectbox .values li strong {
+	display: block;
+	border-bottom: 1px solid #E6E6E5;
+}
+
+.selectbox .values li.value:last-child {
+	border: none;
+}
+
+.selectbox li span {
+	padding: 0 10px;
+}
+
+.selectbox li strong {
+	padding: 0 10px;
+	color: #222;
+}
+
+.selectbox .values li span {
+	display: inline;
+	background: transparent;
+}
+
+.selectbox .values li {
+	background: #fff;
+	color: #444;
+}
+
+.selectbox .values li.value:nth-child(odd) {
+	background: #F5F5F4;
+	color: #444;
+}
+
+.selectbox .values li.selected {
+	border-color: #617DC5;
+	background: #5273C0;
+	color: #fcfcfc;
+}
+
+.selectbox .values li.selected:nth-child(odd) {
+	background: #5677C3;
+	color: #fcfcfc;
+}
+
+.selectbox .values li.value:hover {
+	cursor: pointer;
+	border-color: #998;
+	background: #887;
+	color: #fcfcfc;
+}
+
+.selectbox.multiple {
+	display: block;
+}
+
+.selectbox.multiple .options {
+	background: #E6E6E5;
+	padding: 0 10px;
+	text-align: right;
+	-webkit-border-radius: 0;
+}
+
+.selectbox.multiple .options a {
+	color: #665;
+	padding: 0 0 0 5px;
+	text-decoration: none;
+	text-shadow: #f8f8f8 1px 1px;
+}
+
+.selectbox.multiple .options a:hover {
+	color: #444;
+}
+
+.selectbox.multiple .values {
+	border-bottom: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	position: static;
+}
+
+.selectbox.tiny .current {
+	padding: 0 15px 0 5px;
+	line-height: 20px;
+	height: 19px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+
+.selectbox.tiny .current .arrow {
+	right: 0
+}
+
+.selectbox.tiny .values {
+	top: 20px;
+	line-height: 20px;
+}
+
+.selectbox.tiny .values li span {
+	padding: 0 5px;
+}
+
+.selectbox.multiple.tiny .values li span {
+	padding: 0 10px;
+}
+
+.selectbox .values.inverted { /* DO NOT TOUCH THIS */
+	top: 0;
+}
