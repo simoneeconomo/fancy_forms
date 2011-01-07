@@ -74,7 +74,7 @@
 	position: absolute; left: 0; right: 0;
 	top: 26px;
 	line-height: 22px;
-	z-index: 99999;
+	z-index: 2;
 	max-height: 200px;
 	overflow-y: auto;
 	margin: 0;

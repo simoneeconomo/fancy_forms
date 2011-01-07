@@ -15,7 +15,7 @@
 		objects = objects.map(function() {
 			var object = this;
 
-			var select = function(event, isStartMode) {
+			var select = function(event) {
 				var selectbox = $(this).parents('.selectbox');
 				var value = $(this).find('span').attr('class').replace('value-', '');
 				var option = object.find('option[value="' + value + '"]');
@@ -24,17 +24,17 @@
 				if (!selectbox.hasClass('multiple')) {
 					selectbox.find('li.selected').removeClass('selected');
 					selectbox.find('span.value').html(option.text());
-//					if (isStartMode !== true)
-//						selectbox.find('.current').trigger('click.selectbox');
 				}
 
 				option.attr('selected', !$(this).hasClass('selected'));
 				$(this).toggleClass('selected');
 
+				object.unbind('change.selectbox');
 				object.trigger('change');
+				object.bind('change.selectbox', update);
 			};
 
-			var update = function(event, isStartMode) {
+			var update = function(event) {
 				var select = $(this);
 				var selectbox = select.siblings('.selectbox');
 				var options = select.find('option');
@@ -43,7 +43,7 @@
 					selectbox
 						.find('span.value-' + options.filter(':selected').attr('value'))
 						.parent('li')
-						.trigger('click.selectbox', [isStartMode]);
+						.trigger('click.selectbox');
 				}
 				else {
 					options.each(function() {
@@ -202,10 +202,10 @@
 					/* Event handlers */
 
 					div.values.current.bind('click.selectbox', show);
-					div.values.all.find('li.value').bind('click.selectbox, change.selectbox', select);
+					div.values.all.find('li.value').bind('click.selectbox', select);
 					object.bind('change.selectbox', update);
 
-					object.trigger('change.selectbox', [true]);
+					object.trigger('change.selectbox');
 					object.hide();
 
 					$('body').click(function(event) {
