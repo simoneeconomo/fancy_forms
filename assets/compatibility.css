@@ -1,4 +1,4 @@
-div.group,
+.group,
 .duplicator,
 .duplicator > .controls,
 .duplicator > .instance,
@@ -6,21 +6,11 @@ div.group,
 	overflow: visible;
 }
 
-.settings {
-	padding-bottom: 3em;
-}
+/*.settings .group + label:last-child {*/
+/*	margin-top: -2em;*/
+/*}*/
 
-.settings .contextual div.group, .settings > div.group {
-	margin-bottom: 0;
-	padding-bottom: 0;
-}
-
-.settings > .contextual > .duplicator,
-.settings > label:last-child {
-	margin-bottom: 0;
-}
-
-div.group:after {
+.group:after {
 	clear: left;
 	display: block;
 	content: " ";
@@ -49,8 +39,7 @@ div.group:after {
 	clear: both;
 }
 
-
-.group label > .selectbox {
+.group label > .selectbox, .primary label > .selectbox, .secondary label > .selectbox {
 	display: block;
 }
 

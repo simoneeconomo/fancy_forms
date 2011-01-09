@@ -4,7 +4,7 @@
 		var objects = this;
 		var settings = {
 			mode: '',
-			ignore: 'div.field-subsectionmanager',
+			ignore: 'div.field-subsectionmanager, div.contextual.irrelevant',
 			delay_initialize: false,
 		};
 
@@ -68,7 +68,7 @@
 
 				if (available < 200) {
 					values.queue(function() {
-						values.addClass('inverted');
+						selectbox.addClass('inverted');
 						values.dequeue();
 					});
 					values.animate({
@@ -101,7 +101,7 @@
 						marginTop: 0
 					}, 'fast', 'linear',
 					function() {
-						values.removeClass('inverted');
+						selectbox.removeClass('inverted');
 					});
 				}
 				else {
@@ -122,10 +122,11 @@
 				object = $(object);
 			}
 
-			object.selectbox = {
+			this.selectbox = {
 
 				initialize: function() {
 					if (object.parents(settings.ignore).length != 0) return false;
+					if (object.siblings('.selectbox').length != 0)   return false;
 
 					var div = {
 							main: $('<div class="selectbox" />'), options: $('<div class="options" />'),
@@ -138,9 +139,6 @@
 						'Select all': false,
 						'Deselect all': false
 					});
-
-					if (settings.mode != '')
-						div.main.addClass(settings.mode);
 
 					object.find('option, optgroup').each(function() {
 						if ($(this).is('option')) {
@@ -177,15 +175,18 @@
 						};
 
 						a.selectAll.click(function() {
-							object.selectbox.selectAll();
+							this.selectbox.selectAll();
 						})
 
 						a.deselectAll.click(function() {
-							object.selectbox.deselectAll();
+							this.selectbox.deselectAll();
 						})
 
 					}
 					else {
+						if (settings.mode != '')
+							div.main.addClass(settings.mode);
+
 						div.values.current
 							.append('<span class="value" /><span class="arrow" />')
 							.find('span.value')
@@ -230,7 +231,7 @@
 			};
 
 			if (settings.delay_initialize !== true) {
-				object.selectbox.initialize();
+				this.selectbox.initialize();
 			}
 
 			return object;
