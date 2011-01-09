@@ -17,7 +17,9 @@
 
 		$('#context').change(function() {
 			$('.contextual .duplicator select').each(function() {
-				this.selectbox.initialize();
+				$(this).symphonySelectbox({
+					mode: 'tiny'
+				});
 			});
 		});
 

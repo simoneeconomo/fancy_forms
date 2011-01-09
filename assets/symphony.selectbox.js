@@ -23,7 +23,7 @@
 
 				if (!selectbox.hasClass('multiple')) {
 					selectbox.find('li.selected').removeClass('selected');
-					selectbox.find('span.value').html(option.text());
+					selectbox.find('.current span.value').html(option.text());
 					if (!startMode) selectbox.find('.current').trigger('click.selectbox');
 				}
 
@@ -123,7 +123,7 @@
 				object = $(object);
 			}
 
-			this.selectbox = {
+			object.selectbox = {
 
 				initialize: function() {
 					if (object.parents(settings.ignore).length != 0) return false;
@@ -176,11 +176,11 @@
 						};
 
 						a.selectAll.click(function() {
-							this.selectbox.selectAll();
+							object.selectbox.selectAll();
 						})
 
 						a.deselectAll.click(function() {
-							this.selectbox.deselectAll();
+							object.selectbox.deselectAll();
 						})
 
 					}
@@ -232,7 +232,7 @@
 			};
 
 			if (settings.delay_initialize !== true) {
-				this.selectbox.initialize();
+				object.selectbox.initialize();
 			}
 
 			return object;
