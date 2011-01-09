@@ -15,7 +15,7 @@
 		objects = objects.map(function() {
 			var object = this;
 
-			var select = function(event) {
+			var select = function(event, startMode) {
 				var selectbox = $(this).parents('.selectbox');
 				var value = $(this).find('span').attr('class').replace('value-', '');
 				var option = object.find('option[value="' + value + '"]');
@@ -24,6 +24,7 @@
 				if (!selectbox.hasClass('multiple')) {
 					selectbox.find('li.selected').removeClass('selected');
 					selectbox.find('span.value').html(option.text());
+					if (!startMode) selectbox.find('.current').trigger('click.selectbox');
 				}
 
 				option.attr('selected', !$(this).hasClass('selected'));
@@ -34,7 +35,7 @@
 				object.bind('change.selectbox', update);
 			};
 
-			var update = function(event) {
+			var update = function(event, startMode) {
 				var select = $(this);
 				var selectbox = select.siblings('.selectbox');
 				var options = select.find('option');
@@ -43,7 +44,7 @@
 					selectbox
 						.find('span.value-' + options.filter(':selected').attr('value'))
 						.parent('li')
-						.trigger('click.selectbox');
+						.trigger('click.selectbox', startMode);
 				}
 				else {
 					options.each(function() {
@@ -206,7 +207,7 @@
 					div.values.all.find('li.value').bind('click.selectbox', select);
 					object.bind('change.selectbox', update);
 
-					object.trigger('change.selectbox');
+					object.trigger('change.selectbox', [true]);
 					object.hide();
 
 					$('body').click(function(event) {

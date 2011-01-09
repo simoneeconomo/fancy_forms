@@ -6,7 +6,7 @@
 			return array(
 				'name'			=> 'Better Selectboxes',
 				'version'		=> '1.0.2',
-				'release-date'	=> '2011-01-07',
+				'release-date'	=> '2011-01-09',
 				'author'		=> array(
 					'name'			=> 'Simone Economo',
 					'website'		=> 'http://www.lineheight.net/',

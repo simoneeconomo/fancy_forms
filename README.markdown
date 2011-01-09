@@ -4,7 +4,7 @@ Tired of the old, clumsy, system-default selectbox? Well, here's a great news fo
 
 - Version: 1.0.2
 - Author: Simone Economo, my.ekoes@gmail.com
-- Build Date: 07th Jan 2011
+- Build Date: 09th Jan 2011
 - Requirements: Symphony CMS 2.1.0+
 
 ## Installation
