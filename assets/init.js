@@ -2,9 +2,7 @@
 
 	$(document).ready(function() {
 
-		var s = $("select");
-
-		s.each(function() {
+		$("select").each(function() {
 			if ($(this).parents('.duplicator').length > 0 || $(this).parents('.actions').length > 0) {
 				$(this).symphonySelectbox({
 					mode: 'tiny'
@@ -16,10 +14,21 @@
 		});
 
 		$('#context').change(function() {
-			$('.contextual .duplicator select').each(function() {
-				$(this).symphonySelectbox({
-					mode: 'tiny'
-				});
+			$('.contextual select').each(function() {
+				if ($(this).parents('.duplicator').length > 0) {
+					$(this).symphonySelectbox({
+						mode: 'tiny'
+					});
+				}
+				else {
+					$(this).symphonySelectbox();
+				}
+			});
+		});
+
+		$('.duplicator').bind('construct', function(event, instance) {
+			$(instance).find('select').symphonySelectbox({
+				mode: 'tiny'
 			});
 		});
 

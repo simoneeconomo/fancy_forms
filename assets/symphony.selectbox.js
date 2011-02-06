@@ -127,7 +127,8 @@
 
 				initialize: function() {
 					if (object.parents(settings.ignore).length != 0) return false;
-					if (object.siblings('.selectbox').length != 0)   return false;
+					if (object.siblings('.selectbox').length != 0)
+						object.siblings('.selectbox').remove();
 
 					var div = {
 							main: $('<div class="selectbox" />'), options: $('<div class="options" />'),

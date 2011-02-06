@@ -18,17 +18,17 @@
 .selectbox {
 	display: inline-block;
 	position: relative;
-	font: 11px/normal 'Lucida Grande', Meiryo, Tahoma, Verdana, sans-serif;
+	font: 11px/normal 'Lucida Grande', Tahoma, Verdana, sans-serif;
 	color: #554;
 	text-decoration:none;
-	line-height: 25px;
+	line-height: 22px;
 	text-align: left;
 }
 
 .selectbox .current, .selectbox.multiple .options {
 	cursor: pointer;
 	position: relative;
-	height: 25px;
+	height: 22px;
 	padding: 0 30px 0 10px;
 	border: 1px solid #AFAFAF;
 	-webkit-border-radius: 3px;
@@ -63,7 +63,7 @@
 
 .selectbox .current span {
 	background: transparent;
-	color: #000;
+	color: #444;
 }
 
 .selectbox .display:focus {
@@ -72,7 +72,7 @@
 
 .selectbox .values {
 	position: absolute; left: 0; right: 0;
-	top: 26px;
+	top: 23px;
 	line-height: 22px;
 	z-index: 2;
 	max-height: 200px;
@@ -216,4 +216,14 @@
 	-webkit-border-radius: 0 0 3px 3px;
 	-moz-border-radius: 0 0 3px 3px;
 	border-radius: 0 0 3px 3px;
+}
+
+/* Compatibility */
+
+label > .selectbox {
+	display: block;
+}
+
+label > .selectbox .current {
+	width: auto !important;
 }

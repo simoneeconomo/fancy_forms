@@ -1,0 +1,42 @@
+input[type=submit], button {
+	position: relative;
+	font: bold 11px/25px 'Lucida Grande', Tahoma, Verdana, sans-serif;
+	color: #444;
+	text-decoration:none;
+	text-align: left;
+	height: 25px;
+	padding: 0 10px !important;
+	border: 1px solid #AFAFAF;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	background: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.00, rgb(222, 222, 222)),
+		color-stop(0.60, rgb(245, 245, 245))
+	);
+	background: -moz-linear-gradient(
+		center bottom,
+		rgb(222, 222, 222) 0%,
+		rgb(245, 245, 245) 60%
+	);
+	cursor: pointer;
+}
+
+.index .actions input[type=submit] {
+	height: 22px;
+	line-height: 22px;
+	padding: 0 5px;
+}
+
+/* Compatibility */
+
+button.button {
+	padding: 0.5em 1em !important;
+}
+
+a.button.delete, button.button.delete {
+	background: #887;
+}
