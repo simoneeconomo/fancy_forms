@@ -5,8 +5,8 @@
 		public function about() {
 			return array(
 				'name'			=> 'Better Selectboxes',
-				'version'		=> '1.0.2',
-				'release-date'	=> '2011-01-09',
+				'version'		=> '1.0.3',
+				'release-date'	=> '2011-02-06',
 				'author'		=> array(
 					'name'			=> 'Simone Economo',
 					'website'		=> 'http://www.lineheight.net/',
