@@ -27,7 +27,7 @@
 
 		public function __appendAssets($context) {
 			$context['parent']->Page->addStylesheetToHead(URL . '/extensions/better_selectboxes/assets/symphony.selectbox.css', 'screen', 222);
-			$context['parent']->Page->addStylesheetToHead(URL . '/extensions/better_selectboxes/assets/compatibility.css', 'screen', 222);
+			$context['parent']->Page->addStylesheetToHead(URL . '/extensions/better_selectboxes/assets/symphony.button.css', 'screen', 222);
 			$context['parent']->Page->addScriptToHead(URL . '/extensions/better_selectboxes/assets/symphony.selectbox.js', 222);
 			$context['parent']->Page->addScriptToHead(URL . '/extensions/better_selectboxes/assets/init.js', 222);
 
