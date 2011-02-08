@@ -1,39 +1,30 @@
-.selectbox span {
-	background-color: transparent;
-	border: none;
-	display: inline;
-	margin: 0;
-	padding: 0;
-	text-align: left;
-}
-
-.selectbox ul, .selectbox li {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-
-/* General */
+/*-----------------------------------------------------------------------------
+	General
+-----------------------------------------------------------------------------*/
 
 .selectbox {
-	display: inline-block;
-	position: relative;
-	font: 11px/normal 'Lucida Grande', Tahoma, Verdana, sans-serif;
+	font: 11px/22px 'Lucida Grande', Tahoma, Verdana, sans-serif;
 	color: #554;
-	text-decoration:none;
-	line-height: 22px;
-	text-align: left;
+
+	-webkit-box-shadow: 0 0 2px rgb(200, 200, 200);
+	-moz-box-shadow: 0 0 2px rgb(200, 200, 200);
+	box-shadow: 0 0 2px rgb(200, 200, 200);
+}
+
+.selectbox .current {
+	line-height: 24px;
 }
 
 .selectbox .current, .selectbox.multiple .options {
-	cursor: pointer;
-	position: relative;
 	height: 22px;
 	padding: 0 30px 0 10px;
 	border: 1px solid #AFAFAF;
+
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
+
+	background: rgb(235, 235, 235);
 	background: -webkit-gradient(
 		linear,
 		left bottom,
@@ -46,6 +37,10 @@
 		rgb(222, 222, 222) 0%,
 		rgb(245, 245, 245) 60%
 	);
+
+	-webkit-box-shadow: inset 0 -1px 1px rgb(255, 255, 255);
+	-moz-box-shadow: inset 0 -1px 1px rgb(255, 255, 255);
+	box-shadow: inset 0 -1px 1px rgb(255, 255, 255);
 }
 
 .selectbox.open .current, .selectbox.multiple .options {
@@ -64,28 +59,34 @@
 .selectbox .current span {
 	background: transparent;
 	color: #444;
+	text-shadow: 1px 1px 0 #fff;
 }
 
-.selectbox .display:focus {
-	outline: none;
+.selectbox .current:hover {
+	background: rgb(240, 240, 240);
+	background: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.00, rgb(230, 230, 230)),
+		color-stop(0.60, rgb(250, 250, 250))
+	);
+	background: -moz-linear-gradient(
+		center bottom,
+		rgb(230, 230, 230) 0%,
+		rgb(250, 250, 250) 60%
+	);
 }
 
 .selectbox .values {
-	position: absolute; left: 0; right: 0;
 	top: 23px;
-	line-height: 22px;
-	z-index: 2;
-	max-height: 200px;
-	overflow-y: auto;
-	margin: 0;
 	border: 1px solid #828790;
+	background: #fff;
+	color: #444;
+
 	-webkit-border-radius: 0 0 3px 3px;
 	-moz-border-radius: 0 0 3px 3px;
 	border-radius: 0 0 3px 3px;
-}
-
-.selectbox .values.rendering { /* DO TO TOUCH THIS */
-	position: static;
 }
 
 .selectbox .values li.value,
@@ -108,11 +109,6 @@
 	background: transparent;
 }
 
-.selectbox .values li {
-	background: #fff;
-	color: #444;
-}
-
 .selectbox .values li.optgroup strong {
 	display: block;
 	background: #F5F5F3;
@@ -130,7 +126,6 @@
 }
 
 .selectbox .values li.value:hover {
-	cursor: pointer;
 	border-color: #998;
 	background: #887;
 	color: #fcfcfc;
@@ -138,27 +133,32 @@
 
 .selectbox .values li.selected:hover {
 	border-color: #81a6cc;
-	background: #6f97be;
+	background: #748BC0;
 }
 
-/* Multiple-choice selectboxes */
-
-.selectbox.multiple {
-	display: block;
+.selectbox .values li.value:last-child {
+	border-bottom: none;
 }
+
+/*-----------------------------------------------------------------------------
+	Multiple-choice
+-----------------------------------------------------------------------------*/
 
 .selectbox.multiple .options {
 	background: #E6E6E5;
 	padding: 0 10px;
 	text-align: right;
+
 	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
 }
 
 .selectbox.multiple .options a {
 	color: #665;
 	padding: 0 0 0 5px;
 	text-decoration: none;
-	text-shadow: #f8f8f8 1px 1px;
+	text-shadow: 1px 1px 0 #f8f8f8;
 }
 
 .selectbox.multiple .options a:hover {
@@ -167,13 +167,15 @@
 
 .selectbox.multiple .values {
 	border-bottom: 0;
+
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
 	border-radius: 0;
-	position: static;
 }
 
-/* Tiny selectboxes */
+/*-----------------------------------------------------------------------------
+	Tiny mode
+-----------------------------------------------------------------------------*/
 
 .selectbox.tiny .current {
 	padding: 0 30px 0 5px;
@@ -203,10 +205,11 @@
 	padding: 0 10px;
 }
 
-/* Inverted selectboxes */
+/*-----------------------------------------------------------------------------
+	Inverted
+-----------------------------------------------------------------------------*/
 
-.selectbox.inverted .values { /* DO NOT TOUCH THIS */
-	top: 0;
+.selectbox.inverted .values {
 	-webkit-border-radius: 3px 3px 0 0;
 	-moz-border-radius: 3px 3px 0 0;
 	border-radius: 3px 3px 0 0;
@@ -218,7 +221,92 @@
 	border-radius: 0 0 3px 3px;
 }
 
-/* Compatibility */
+/*-----------------------------------------------------------------------------
+	DO NOT EDIT
+-----------------------------------------------------------------------------*/
+
+select {
+	position: absolute;
+	left: -9999px;
+}
+
+.selectbox ul, .selectbox li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.selectbox {
+	display: inline-block;
+	position: relative;
+	margin-top: 1px;
+	text-align: left;
+}
+
+.selectbox .current,
+.selectbox.multiple .options {
+	cursor: pointer;
+	position: relative;
+}
+
+.selectbox .values {
+	position: absolute; left: 0; right: 0;
+	z-index: 2;
+	margin: 0;
+	max-height: 200px;
+	overflow-y: auto;
+
+/*	overflow-y: hidden;*/
+/*	max-height: 0;*/
+/*	visibility: hidden;*/
+}
+
+select:focus + .selectbox .values,
+.selectbox.open .values,
+.selectbox.multiple .values {
+/*	transition: height 0.2s linear;*/
+/*	-webkit-transition: max-height 0.2s linear, visibility 0.2s linear;*/
+/*	-moz-transition: height 0.2s linear;*/
+/*	-o-transition: height 0.2s linear;*/
+
+/*	overflow-y: auto;*/
+/*	visibility: visible;*/
+/*	max-height: 200px;*/
+}
+
+.selectbox .values.rendering { /* DO TO TOUCH THIS */
+	position: static;
+}
+
+.selectbox .values li.value:hover {
+	cursor: pointer;
+}
+
+.selectbox.multiple {
+	display: block;
+}
+
+.selectbox.multiple .values {
+	position: static;
+}
+
+.selectbox.inverted .values { /* DO NOT TOUCH THIS */
+	top: 0;
+}
+
+select:focus + .selectbox.inverted .values,
+.selectbox.open.inverted .values { /* DO TO TOUCH THIS */
+/*	top: -190px;*/
+/*	visibility: visible;*/
+/*	max-height: 200px;*/
+
+/*	transition: height 0.2s linear;*/
+/*	-webkit-transition: max-height 0.2s linear, visibility 0.2s linear, top 0.2s linear;*/
+/*	-moz-transition: height 0.2s linear;*/
+/*	-o-transition: height 0.2s linear;*/
+}
+
+/*--- Compatibility ---*/
 
 label > .selectbox {
 	display: block;
@@ -226,4 +314,62 @@ label > .selectbox {
 
 label > .selectbox .current {
 	width: auto !important;
+}
+
+body > form .selectbox span {
+	background-color: transparent;
+	border: none;
+	display: inline;
+	margin: 0;
+	text-align: left;
+}
+
+body > form .current span {
+	padding: 0;
+}
+
+body > form .values span {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+body > form .group,
+body > form .duplicator,
+body > form .duplicator > .controls,
+body > form .duplicator > .instance,
+body > form .duplicator > .instance > .content {
+	overflow: visible;
+}
+
+body > form .group:after {
+	clear: left;
+	display: block;
+	content: " ";
+	height: 1%;
+}
+
+body > form .group.contextual.sections {
+	margin-bottom: -20px;
+}
+
+body > form .duplicator > .controls.top {
+	overflow: hidden;
+}
+
+body > form .duplicator > .controls .selectbox {
+	top: 1px;
+}
+
+body > form .duplicator > .instance {
+	margin: 0;
+	padding: 0;
+	position: static;
+}
+
+body > form .duplicator > .instance > .header {
+	clear: none;
+}
+
+body > form .duplicator.collapsible > .instance > .header {
+	clear: both;
 }

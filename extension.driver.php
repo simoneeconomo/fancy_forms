@@ -4,9 +4,9 @@
 
 		public function about() {
 			return array(
-				'name'			=> 'Better Selectboxes',
-				'version'		=> '1.0.3',
-				'release-date'	=> '2011-02-06',
+				'name'			=> 'UI Reloaded',
+				'version'		=> '1.1.0',
+				'release-date'	=> '2011-02-08',
 				'author'		=> array(
 					'name'			=> 'Simone Economo',
 					'website'		=> 'http://www.lineheight.net/',
@@ -26,10 +26,13 @@
 		}
 
 		public function __appendAssets($context) {
-			$context['parent']->Page->addStylesheetToHead(URL . '/extensions/better_selectboxes/assets/symphony.selectbox.css', 'screen', 222);
-			$context['parent']->Page->addStylesheetToHead(URL . '/extensions/better_selectboxes/assets/symphony.button.css', 'screen', 222);
-			$context['parent']->Page->addScriptToHead(URL . '/extensions/better_selectboxes/assets/symphony.selectbox.js', 222);
-			$context['parent']->Page->addScriptToHead(URL . '/extensions/better_selectboxes/assets/init.js', 222);
+			$page = $context['parent']->Page;
+			$page->addStylesheetToHead(URL . '/extensions/better_selectboxes/assets/symphony.selectbox.css', 'screen', 222);
+			$page->addStylesheetToHead(URL . '/extensions/better_selectboxes/assets/symphony.textbox.css', 'screen', 222);
+			$page->addStylesheetToHead(URL . '/extensions/better_selectboxes/assets/symphony.button.css', 'screen', 222);
+
+			$page->addScriptToHead(URL . '/extensions/better_selectboxes/assets/symphony.selectbox.js', 222);
+			$page->addScriptToHead(URL . '/extensions/better_selectboxes/assets/init.js', 222);
 
 		}
 	}

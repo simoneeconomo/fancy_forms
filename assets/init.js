@@ -3,7 +3,7 @@
 	$(document).ready(function() {
 
 		$("select").each(function() {
-			if ($(this).parents('.duplicator').length > 0 || $(this).parents('.actions').length > 0) {
+			if ($(this).parents('.controls').length > 0 || $(this).parents('.actions').length > 0) {
 				$(this).symphonySelectbox({
 					mode: 'tiny'
 				});
@@ -15,7 +15,7 @@
 
 		$('#context').change(function() {
 			$('.contextual select').each(function() {
-				if ($(this).parents('.duplicator').length > 0) {
+				if ($(this).parents('.controls').length > 0) {
 					$(this).symphonySelectbox({
 						mode: 'tiny'
 					});

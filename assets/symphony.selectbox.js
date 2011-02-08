@@ -60,6 +60,7 @@
 				var selectbox = $(this).parents('.selectbox');
 				var values = selectbox.find('.values');
 				var available = $(window).scrollTop() + $(window).height() - $(this).offset().top;
+				var totalheight = selectbox.data('height') > values.css('max-height') ? values.css('max-height') : selectbox.data('height');
 
 				available = available < 0 ? available * -1 : available;
 
@@ -67,7 +68,7 @@
 					$(this).find('.current').trigger('click.selectbox');
 				});
 
-				if (available < 200) {
+				if (available < totalheight) {
 					values.queue(function() {
 						selectbox.addClass('inverted');
 						values.dequeue();
@@ -93,10 +94,11 @@
 				var selectbox = $(this).parents('.selectbox');
 				var values = selectbox.find('.values');
 				var available = $(window).scrollTop() + $(window).height() - $(this).offset().top;
+				var totalheight = selectbox.data('height') > values.css('max-height') ? values.css('max-height') : selectbox.data('height');
 
 				available = available < 0 ? available * -1 : available;
 
-				if (available < 200) {
+				if (available < totalheight) {
 					values.animate({
 						height: 'toggle',
 						marginTop: 0
@@ -149,6 +151,8 @@
 								.addClass('value')
 								.html('<span class="value-' + $(this).attr('value') + '">' + $(this).text() + '</span>');
 
+							if ($(this).val() == object.val()) li.addClass('selected');
+
 							ul[$(this).parent().is('optgroup') ? 'nested' : 'main'].append(li);
 						}
 						else {
@@ -199,6 +203,7 @@
 						div.values.all.addClass('rendering');
 						div.values.current.css('width', div.values.all.width());
 						div.values.all.removeClass('rendering');
+						div.main.data('height', div.values.all.height())
 						div.values.all.hide();
 					}
 
@@ -209,7 +214,6 @@
 					object.bind('change.selectbox', update);
 
 					object.trigger('change.selectbox', [true]);
-					object.hide();
 
 					$('body').click(function(event) {
 						if ($(event.target).parents('.selectbox.open').index() == -1)

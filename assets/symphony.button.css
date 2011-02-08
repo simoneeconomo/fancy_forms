@@ -1,15 +1,21 @@
+/*-----------------------------------------------------------------------------
+	General
+-----------------------------------------------------------------------------*/
+
+.actions input[type=submit],
+.contents .actions input[type=submit],
 input[type=submit], button {
+	cursor: pointer;
 	position: relative;
-	font: bold 11px/25px 'Lucida Grande', Tahoma, Verdana, sans-serif;
-	color: #444;
-	text-decoration:none;
-	text-align: left;
-	height: 25px;
-	padding: 0 10px !important;
+	padding: 0 10px;
+	height: 26px;
 	border: 1px solid #AFAFAF;
+
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
+
+	background: rgb(235, 235, 235);
 	background: -webkit-gradient(
 		linear,
 		left bottom,
@@ -22,19 +28,52 @@ input[type=submit], button {
 		rgb(222, 222, 222) 0%,
 		rgb(245, 245, 245) 60%
 	);
-	cursor: pointer;
+
+	color: #444;
+	text-shadow: 1px 1px 0 #fff;
+	font: bold 11px/25px 'Lucida Grande', Tahoma, Verdana, sans-serif;
+	text-align: left;
+
+	-webkit-box-shadow: 0 0 2px rgb(200, 200, 200), inset 0 -1px 1px rgb(255, 255, 255);
+	-moz-box-shadow: 0 0 2px rgb(200, 200, 200), inset 0 -1px 1px rgb(255, 255, 255);
+	box-shadow: 0 0 2px rgb(200, 200, 200), inset 0 -1px 1px rgb(255, 255, 255);
 }
 
-.index .actions input[type=submit] {
+.actions input[type=submit]:hover,
+.contents .actions input[type=submit]:hover,
+input[type=sumbmit]:hover, button:hover {
+	border: 1px solid #888;
+
+	background: rgb(240, 240, 240);
+	background: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.00, rgb(230, 230, 230)),
+		color-stop(0.60, rgb(250, 250, 250))
+	);
+	background: -moz-linear-gradient(
+		center bottom,
+		rgb(230, 230, 230) 0%,
+		rgb(250, 250, 250) 60%
+	);
+}
+
+table + .actions input[type=submit] {
 	height: 22px;
 	line-height: 22px;
 	padding: 0 5px;
 }
 
-/* Compatibility */
+/*--- Compatibility ---*/
 
-button.button {
-	padding: 0.5em 1em !important;
+button.button,
+button.button:hover {
+	border: none;
+	padding: 0.5em 1em;
+	height: auto;
+	line-height: 11px;
+	-webkit-box-shadow: none;
 }
 
 a.button.delete, button.button.delete {
