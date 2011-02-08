@@ -16,6 +16,8 @@
 
 			var click = function() {
 				$(this).toggleClass('checked');
+
+				object.attr('checked', $(this).hasClass('checked'))
 			}
 
 			var update = function() {
