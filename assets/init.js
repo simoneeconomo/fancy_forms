@@ -32,6 +32,8 @@
 			});
 		});
 
+		$('input[type="checkbox"]').symphonyCheckbox();
+
 	});
 
 

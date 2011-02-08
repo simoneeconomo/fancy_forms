@@ -29,9 +29,11 @@
 			$page = $context['parent']->Page;
 			$page->addStylesheetToHead(URL . '/extensions/better_selectboxes/assets/symphony.selectbox.css', 'screen', 222);
 			$page->addStylesheetToHead(URL . '/extensions/better_selectboxes/assets/symphony.textbox.css', 'screen', 222);
+			$page->addStylesheetToHead(URL . '/extensions/better_selectboxes/assets/symphony.checkbox.css', 'screen', 222);
 			$page->addStylesheetToHead(URL . '/extensions/better_selectboxes/assets/symphony.button.css', 'screen', 222);
 
 			$page->addScriptToHead(URL . '/extensions/better_selectboxes/assets/symphony.selectbox.js', 222);
+			$page->addScriptToHead(URL . '/extensions/better_selectboxes/assets/symphony.checkbox.js', 222);
 			$page->addScriptToHead(URL . '/extensions/better_selectboxes/assets/init.js', 222);
 
 		}
