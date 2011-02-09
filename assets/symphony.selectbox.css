@@ -63,6 +63,8 @@
 }
 
 .selectbox .current:hover {
+	border: 1px solid #888;
+
 	background: rgb(240, 240, 240);
 	background: -webkit-gradient(
 		linear,

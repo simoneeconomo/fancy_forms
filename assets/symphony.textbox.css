@@ -34,6 +34,11 @@ label input, textarea {
 	box-shadow: 0 0 2px rgb(200, 200, 200), inset 0 1px 1px rgb(255, 255, 255);
 }
 
+label input:hover,
+textarea:hover {
+	border: 1px solid #888;
+}
+
 /*--- Compatibility ---*/
 
 .group.contextual.sections + label input[type=checkbox] {
