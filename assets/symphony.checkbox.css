@@ -37,9 +37,9 @@
 
 .checkbox.checked .value {
 	position: relative;
-	top: -5px; left: 1px;
-	width: 16px;
-	height: 16px;
+	top: 2px; left: 1px;
+	width: 11px;
+	height: 9px;
 	background: url(images/tick.png) center center no-repeat;
 }
 

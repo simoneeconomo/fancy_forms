@@ -1,10 +1,10 @@
 <?php
 
-	class extension_better_selectboxes extends Extension {
+	class extension_better_forms extends Extension {
 
 		public function about() {
 			return array(
-				'name'			=> 'UI Reloaded',
+				'name'			=> 'Better Forms',
 				'version'		=> '1.1.0',
 				'release-date'	=> '2011-02-08',
 				'author'		=> array(
@@ -27,14 +27,14 @@
 
 		public function __appendAssets($context) {
 			$page = $context['parent']->Page;
-			$page->addStylesheetToHead(URL . '/extensions/better_selectboxes/assets/symphony.selectbox.css', 'screen', 222);
-			$page->addStylesheetToHead(URL . '/extensions/better_selectboxes/assets/symphony.textbox.css', 'screen', 222);
-			$page->addStylesheetToHead(URL . '/extensions/better_selectboxes/assets/symphony.checkbox.css', 'screen', 222);
-			$page->addStylesheetToHead(URL . '/extensions/better_selectboxes/assets/symphony.button.css', 'screen', 222);
+			$page->addStylesheetToHead(URL . '/extensions/better_forms/assets/symphony.selectbox.css', 'screen', 222);
+			$page->addStylesheetToHead(URL . '/extensions/better_forms/assets/symphony.textbox.css', 'screen', 222);
+			$page->addStylesheetToHead(URL . '/extensions/better_forms/assets/symphony.checkbox.css', 'screen', 222);
+			$page->addStylesheetToHead(URL . '/extensions/better_forms/assets/symphony.button.css', 'screen', 222);
 
-			$page->addScriptToHead(URL . '/extensions/better_selectboxes/assets/symphony.selectbox.js', 222);
-			$page->addScriptToHead(URL . '/extensions/better_selectboxes/assets/symphony.checkbox.js', 222);
-			$page->addScriptToHead(URL . '/extensions/better_selectboxes/assets/init.js', 222);
+			$page->addScriptToHead(URL . '/extensions/better_forms/assets/symphony.selectbox.js', 222);
+			$page->addScriptToHead(URL . '/extensions/better_forms/assets/symphony.checkbox.js', 222);
+			$page->addScriptToHead(URL . '/extensions/better_forms/assets/init.js', 222);
 
 		}
 	}

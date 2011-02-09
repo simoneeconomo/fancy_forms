@@ -13,6 +13,8 @@
 			}
 		});
 
+		$('input[type="checkbox"]').symphonyCheckbox();
+
 		$('#context').change(function() {
 			$('.contextual select').each(function() {
 				if ($(this).parents('.controls').length > 0) {
@@ -24,15 +26,15 @@
 					$(this).symphonySelectbox();
 				}
 			});
+			$('.contextual input[type="checkbox"]').symphonyCheckbox();
 		});
 
 		$('.duplicator').bind('construct', function(event, instance) {
-			$(instance).find('select').symphonySelectbox({
-				mode: 'tiny'
-			});
+			$(instance).find('select').symphonySelectbox();
+			$(instance).find('input[type="checkbox"]').symphonyCheckbox();
 		});
 
-		$('input[type="checkbox"]').symphonyCheckbox();
+
 
 	});
 

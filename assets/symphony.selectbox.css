@@ -109,6 +109,10 @@
 	background: transparent;
 }
 
+.selectbox .values li.optgroup {
+	border-top: 1px solid #E6E6E5;
+}
+
 .selectbox .values li.optgroup strong {
 	display: block;
 	background: #F5F5F3;
