@@ -2,7 +2,7 @@
 
 A collection of UI replacements for the old, clumsy, system-default selectboxes, button and inputs. Once you try it, you are addicted to it.
 
-- Version: 1.1.0
+- Version: 1.1.0 Beta
 - Author: Simone Economo, my.ekoes@gmail.com
 - Build Date: 08th Feb 2011
 - Requirements: Symphony CMS 2.1.0+

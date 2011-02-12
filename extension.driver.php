@@ -5,7 +5,7 @@
 		public function about() {
 			return array(
 				'name'			=> 'Better Forms',
-				'version'		=> '1.1.0',
+				'version'		=> '1.1.0 Beta',
 				'release-date'	=> '2011-02-08',
 				'author'		=> array(
 					'name'			=> 'Simone Economo',
