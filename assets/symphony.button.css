@@ -73,7 +73,11 @@ button.button:hover {
 	padding: 0.5em 1em;
 	height: auto;
 	line-height: 11px;
+	font-weight: normal;
+
 	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
 }
 
 a.button.delete, button.button.delete {

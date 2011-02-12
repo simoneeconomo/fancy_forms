@@ -6,6 +6,7 @@ label input, textarea {
 	padding: 0 5px;
 	margin-top: 1px;
 	border: 1px solid #AFAFAF;
+	height: 24px;
 
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
@@ -32,6 +33,12 @@ label input, textarea {
 	-webkit-box-shadow: 0 0 2px rgb(200, 200, 200), inset 0 1px 1px rgb(255, 255, 255);
 	-moz-box-shadow: 0 0 2px rgb(200, 200, 200), inset 0 1px 1px rgb(255, 255, 255);
 	box-shadow: 0 0 2px rgb(200, 200, 200), inset 0 1px 1px rgb(255, 255, 255);
+}
+
+textarea {
+	height: auto;
+	padding-top: 5px;
+	font: 11px/1.8 'Lucida Grande', Tahoma, Verdana, sans-serif !important;
 }
 
 label input:hover,

@@ -6,7 +6,6 @@
 	margin: 0 5px 0 0;
 	height: 12px;
 	width: 12px;
-	margin-top: 1px;
 	border: 1px solid #AFAFAF;
 
 	-webkit-border-radius: 3px;
@@ -41,9 +40,9 @@
 
 .checkbox.checked .value {
 	position: relative;
-	top: 2px; left: 1px;
-	width: 11px;
-	height: 9px;
+	top: -2px; left: 1px;
+	width: 15px;
+	height: 13px;
 	background: url(images/tick.png) center center no-repeat;
 }
 
@@ -51,8 +50,10 @@
 	DO NOT EDIT
 -----------------------------------------------------------------------------*/
 
-.group.contextual.sections + label input[type=checkbox],
 input[type=checkbox] {
+	margin: 0;
+	width: 0;
+	height: 0;
 	position: absolute;
 	left: -9999px;
 }
@@ -63,15 +64,12 @@ input[type=checkbox] {
 	top: -1px;
 	display: inline-block;
 	vertical-align: top;
-	text-align: left;
 }
 
 /*--- Compatibility ---*/
 
 .group.contextual.sections + label .checkbox {
-	vertical-align: top;
-	position: relative;
-	top: 2px;
+	top: 3px;
 }
 
 div.compact label i {

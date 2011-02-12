@@ -8,6 +8,8 @@
 			delay_initialize: false,
 		};
 
+		var MAGIC_NUMBER = 20;
+
 		$.extend(settings, custom_settings);
 
 	/*-----------------------------------------------------------------------*/
@@ -59,7 +61,7 @@
 			var show = function() {
 				var selectbox = $(this).parents('.selectbox');
 				var values = selectbox.find('.values');
-				var available = $(window).scrollTop() + $(window).height() - $(this).offset().top;
+				var available = $(window).scrollTop() + $(window).height() - $(this).offset().top - MAGIC_NUMBER;
 				var totalheight = selectbox.data('height') > values.css('max-height') ? values.css('max-height') : selectbox.data('height');
 
 				available = available < 0 ? available * -1 : available;
@@ -93,7 +95,7 @@
 			var hide = function() {
 				var selectbox = $(this).parents('.selectbox');
 				var values = selectbox.find('.values');
-				var available = $(window).scrollTop() + $(window).height() - $(this).offset().top;
+				var available = $(window).scrollTop() + $(window).height() - $(this).offset().top - MAGIC_NUMBER;
 				var totalheight = selectbox.data('height') > values.css('max-height') ? values.css('max-height') : selectbox.data('height');
 
 				available = available < 0 ? available * -1 : available;
