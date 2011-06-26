@@ -18,24 +18,26 @@
 		public function getSubscribedDelegates() {
 			return array(
 				array(
-					'page' => '/administration/',
+					'page' => '/backend/',
 					'delegate' => 'AdminPagePreGenerate',
-					'callback' => '__appendAssets'
+					'callback' => 'appendAssets'
 				)
 			);
 		}
 
-		public function __appendAssets($context) {
+		public function appendAssets($context) {
 			$page = $context['parent']->Page;
-			$page->addStylesheetToHead(URL . '/extensions/better_forms/assets/symphony.selectbox.css', 'screen', 222);
-			$page->addStylesheetToHead(URL . '/extensions/better_forms/assets/symphony.textbox.css', 'screen', 222);
-			$page->addStylesheetToHead(URL . '/extensions/better_forms/assets/symphony.checkbox.css', 'screen', 222);
-			$page->addStylesheetToHead(URL . '/extensions/better_forms/assets/symphony.button.css', 'screen', 222);
 
-			$page->addScriptToHead(URL . '/extensions/better_forms/assets/symphony.selectbox.js', 222);
-			$page->addScriptToHead(URL . '/extensions/better_forms/assets/symphony.checkbox.js', 222);
-			$page->addScriptToHead(URL . '/extensions/better_forms/assets/init.js', 222);
+			if ($page instanceof HTMLPage) {
+				$page->addStylesheetToHead(URL . '/extensions/better_forms/assets/symphony.selectbox.css', 'screen', 222);
+				$page->addStylesheetToHead(URL . '/extensions/better_forms/assets/symphony.textbox.css', 'screen', 222);
+				$page->addStylesheetToHead(URL . '/extensions/better_forms/assets/symphony.checkbox.css', 'screen', 222);
+				$page->addStylesheetToHead(URL . '/extensions/better_forms/assets/symphony.button.css', 'screen', 222);
 
+				$page->addScriptToHead(URL . '/extensions/better_forms/assets/symphony.selectbox.js', 222);
+				$page->addScriptToHead(URL . '/extensions/better_forms/assets/symphony.checkbox.js', 222);
+				$page->addScriptToHead(URL . '/extensions/better_forms/assets/init.js', 222);
+			}
 		}
 	}
 

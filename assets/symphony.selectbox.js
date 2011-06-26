@@ -4,7 +4,7 @@
 		var objects = this;
 		var settings = {
 			mode: '',
-			ignore: 'div.field-subsectionmanager, div.contextual.irrelevant',
+			ignore: 'div.field-subsectionmanager, div.contextual.irrelevant, #extension-dashboard-index h2',
 			delay_initialize: false,
 		};
 
