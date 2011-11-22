@@ -55,7 +55,6 @@
 					if (object.is(':checked')) div.main.addClass('checked');
 
 					/* Event handlers */
-
 					div.main.bind('click.checkbox', click);
 					object.bind('change.checkbox', update);
 
