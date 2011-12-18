@@ -14,7 +14,7 @@
 		</author>
 	</authors>
 	<media>
-		<item type="image" url="http://symphonyextensions.com/eKoeS/better_forms/media/better_forms.png">Fancy Forms: A collection of UI replacements for system-default selectboxes, button and inputs.</item>
+		<item type="image" url="http://symphonyextensions.com/eKoeS/fancy_forms/media/fancy_forms.png">Fancy Forms: A collection of UI replacements for system-default selectboxes, button and inputs.</item>
 	</media>
 	<releases>
 		<release version="1.1.2beta" date="2011-12-18" min="2.1.0" max="2.2.x">
