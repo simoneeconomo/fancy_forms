@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extension id="fancy_forms" status="experimental" xmlns="http://symphony-cms.com/schemas/extension/1.0">
 	<name>UI Experiment: Fancy Forms</name>
-	<description>A collection of UI replacements for the system-default selectboxes, button and inputs. *Warning*: it causes severe addiction!</description>
+	<description>A collection of UI replacements for system-default selectboxes, button and inputs. *Warning*: it causes severe addiction!</description>
 	<repo type="github">https://github.com/eKoeS/fancy_forms</repo>
 	<url type="discuss">http://symphony-cms.com/discuss/thread/58893/</url>
 	<types>
@@ -14,13 +14,13 @@
 		</author>
 	</authors>
 	<media>
-		<item type="image" url="http://symphonyextensions.com/eKoeS/better_forms/media/better_forms.png">Fancy Forms: A collection of UI replacements for the system-default selectboxes, button and inputs.</item>
+		<item type="image" url="http://symphonyextensions.com/eKoeS/better_forms/media/better_forms.png">Fancy Forms: A collection of UI replacements for system-default selectboxes, button and inputs.</item>
 	</media>
 	<releases>
-		<release version="1.1.2beta" date="2011-12-18" min="2.1.0">
+		<release version="1.1.2beta" date="2011-12-18" min="2.1.0" max="2.2.x">
 			* Added `extension.meta.xml`.
-			* The extension name has been changed from "Better Forms" to "UI Experiment: Fancy Forms".
+			* The extension has been renamed "UI Experiment: Fancy Forms" (it was previously called "Better Forms").
 		</release>
-		<release version="1.1.1beta" date="2011-02-12" min="2.1.0" />
+		<release version="1.1.1beta" date="2011-02-12" min="2.1.0" max="2.2.x"/>
 	</releases>
 </extension>
