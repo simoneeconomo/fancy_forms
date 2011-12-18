@@ -1,17 +1,27 @@
-# Better Forms
+## FAQ: Frequently asked questions
 
-A collection of UI replacements for the old, clumsy, system-default selectboxes, button and inputs. Once you try it, you are addicted to it.
+> Your extension conflicts with <any_other_extension>. What am I supposed to do?
 
-- Version: 1.1.0 Beta
-- Author: Simone Economo, my.ekoes@gmail.com
-- Build Date: 08th Feb 2011
-- Requirements: Symphony CMS 2.1.0+
+You can populate the [`ignore` array](https://github.com/eKoeS/fancy_forms/blob/master/assets/symphony.selectbox.js#L7) with as many CSS selectors as you want. Fancy Forms won’t replace any element whose parents match the given selector.
 
-## Installation
+> Can this extension be used on frontend too?
 
-_Note_: The latest version can alway be grabbed with `git clone git://github.com/eKoeS/better_forms.git`
+Sure, all it does is providing some jQuery plugins and stylesheets. Here’s the list of resources you need to include in your pages:
 
-1. Upload the `better_forms` folder in this archive to your Symphony `extensions` folder.
-2. Enable it by selecting the "Better Forms", choose _Enable_ from the _with-selected_ menu, then click _Apply_.
-3. Go to System > Preferences to enable/disable "Better Forms".
-4. Hug your mum and tell her you love her
+    symphony.button.css
+    symphony.checkbox.css
+    symphony.checkbox.js
+    symphony.selectbox.css
+    symphony.selectbox.js
+    symphony.textbox.css
+
+While buttons textinputs and textareas only need some custom CSS rules, selectboxes and checkboxes are initialised as ordinary jQuery plugins.
+
+Example:
+
+    $('input[type="checkbox"]').symphonyCheckbox();
+    $('select').symphonySelectbox();
+
+## Installation & Updating
+
+Information about [installing and updating extensions](http://symphony-cms.com/learn/tasks/view/install-an-extension/) can be found in the Symphony documentation at <http://symphony-cms.com/learn/>.

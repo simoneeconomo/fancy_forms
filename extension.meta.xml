@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension id="fancy_forms" status="experimental" xmlns="http://symphony-cms.com/schemas/extension/1.0">
+	<name>UI Experiment: Fancy Forms</name>
+	<description>A collection of UI replacements for the system-default selectboxes, button and inputs. *Warning*: it causes severe addiction!</description>
+	<repo type="github">https://github.com/eKoeS/fancy_forms</repo>
+	<url type="discuss">http://symphony-cms.com/discuss/thread/58893/</url>
+	<types>
+		<type>Interface</type>
+	</types>
+	<authors>
+		<author>
+			<name github="eKoeS" symphony="eKoeS">Simone Economo</name>
+			<website>http://www.lineheight.net/</website>
+		</author>
+	</authors>
+	<media>
+		<item type="image" url="http://symphonyextensions.com/eKoeS/better_forms/media/better_forms.png">Fancy Forms: A collection of UI replacements for the system-default selectboxes, button and inputs.</item>
+	</media>
+	<releases>
+		<release version="1.1.2beta" date="2011-12-18" min="2.1.0">
+			* Added `extension.meta.xml`.
+			* The extension name has been changed from "Better Forms" to "UI Experiment: Fancy Forms".
+		</release>
+		<release version="1.1.1beta" date="2011-02-12" min="2.1.0" />
+	</releases>
+</extension>
