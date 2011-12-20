@@ -14,7 +14,7 @@ Future releases will provide:
 
 ## FAQ: Frequently asked questions
 
-> Q: This (awesome) extension causes conflicts with <any_other_extension>. What am I supposed to do?
+> Q: This (awesome) extension causes conflicts with $any_other_extension. What am I supposed to do?
 
 A: You can populate the [`ignore` array](https://github.com/eKoeS/fancy_forms/blob/master/assets/symphony.selectbox.js#L7) (available in both `symphonySelectbox` and `symphonyCheckbox`) with a complex CSS selector. Upon initialization, Fancy Forms [will skip](https://github.com/eKoeS/fancy_forms/blob/master/assets/symphony.selectbox.js#L134) any element whose parents match the given expression.
 
