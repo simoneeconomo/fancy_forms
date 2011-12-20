@@ -2,7 +2,7 @@ This extension comes from the need of having fully customizable form controls th
 
 ## Features
 
- * Two homemade jQuery plugins, `symphonySelectbox` and `symphonyCheckbox`, to respectively replace instances of `<select>` and `<input type"checkbox">` elements with more advanced UI controls.
+ * Two homemade jQuery plugins, `symphonySelectbox` and `symphonyCheckbox`, to respectively replace `select` and `input type"checkbox"` elements with more advanced UI controls.
  * Consistent styles using recent standards (i.e. CSS3) for text inputs, textareas and buttons.
  * Replacements for both multiple- and single-choice selectboxes, with two available sizes: "_tiny_" and "_normal_".
 
