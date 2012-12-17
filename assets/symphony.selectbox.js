@@ -41,7 +41,7 @@
 				var select = $(this);
 				var selectbox = select.siblings('.selectbox');
 				var options = select.find('option');
-        var escaper = function(s) { return s.replace(/([#;&,\.\+\*\~':"\!\^$\[\]\(\)=>\|])/g, "\\$1"); };
+                var escaper = function(s) { return s.replace(/([#;&,\.\+\*\~':"\!\^$\[\]\(\)=>\|])/g, "\\$1"); };
 
 				if (!select.attr('multiple')) {
 					selectbox
@@ -154,7 +154,16 @@
 								.addClass('value')
 								.html('<span class="value-' + $(this).attr('value') + '">' + $(this).text() + '</span>');
 
-							if ($(this).val() == object.val()) li.addClass('selected');
+
+
+							if ($(this).val() == object.val()) {
+                                li.addClass('selected');
+                            } else {
+                                if($.inArray($(this).val(), object.val()) != -1)
+                                {
+                                    li.addClass('selected');
+                                }
+                            }
 
 							ul[$(this).parent().is('optgroup') ? 'nested' : 'main'].append(li);
 						}
