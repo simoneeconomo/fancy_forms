@@ -26,7 +26,7 @@
 		}
 
 		public function appendAssets($context) {
-			$page = $context['parent']->Page;
+			$page = Administration::instance()->Page;
 
 			if ($page instanceof HTMLPage) {
 				$page->addStylesheetToHead(URL . '/extensions/fancy_forms/assets/symphony.selectbox.css', 'screen', 222);
