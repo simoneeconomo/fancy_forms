@@ -250,4 +250,4 @@
 	};
 
 
-})(jQuery.noConflict());
+})(jQuery);

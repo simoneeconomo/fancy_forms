@@ -39,4 +39,4 @@
 	});
 
 
-})(jQuery.noConflict());
+})(jQuery);
